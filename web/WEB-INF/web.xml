@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <description>Discovery data feed using JSONP</description>
+        <servlet-name>Eid2DiscoFeed</servlet-name>
+        <servlet-class>Eid2DiscoFeed</servlet-class>
+        <init-param>
+            <param-name>MetaDataCache</param-name>
+            <param-value>/opt/local/var/run/shibboleth/eid2-test-1.0.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>CacheRefreshMinutes</param-name>
+            <param-value>60</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Eid2DiscoFeed</servlet-name>
+        <url-pattern>/feed</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>2</session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

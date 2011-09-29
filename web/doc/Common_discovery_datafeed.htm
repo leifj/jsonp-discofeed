@@ -1,0 +1,2633 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:mv="http://macVmlSchemaUri" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta name=Title content="Eid2 JSONP Discovery Feed Proposal">
+<meta name=Keywords content="">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="Common_discovery_datafeed_files/filelist.xml">
+<link rel=Edit-Time-Data href="Common_discovery_datafeed_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Eid2 JSONP Discovery Feed Proposal</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Stefan Santesson</o:Author>
+  <o:LastAuthor>Stefan Santesson</o:LastAuthor>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>10</o:TotalTime>
+  <o:LastPrinted>2011-09-13T08:22:00Z</o:LastPrinted>
+  <o:Created>2011-09-13T08:26:00Z</o:Created>
+  <o:LastSaved>2011-09-13T08:43:00Z</o:LastSaved>
+  <o:Pages>7</o:Pages>
+  <o:Words>2738</o:Words>
+  <o:Characters>15612</o:Characters>
+  <o:Company>AAA Security</o:Company>
+  <o:Lines>130</o:Lines>
+  <o:Paragraphs>36</o:Paragraphs>
+  <o:CharactersWithSpaces>18314</o:CharactersWithSpaces>
+  <o:Version>14.0</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="Common_discovery_datafeed_files/themedata.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>125</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>18 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>18 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>JA</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef m:val="off"/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapRight/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="subSup"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="276">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Courier New";
+	panose-1:2 7 3 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073711037 9 0 511 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:78;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-font-charset:78;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-font-charset:78;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073743103 0 0 415 0;}
+@font-face
+	{font-family:"Lucida Grande";
+	panose-1:2 11 6 0 4 5 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-520090897 1342218751 0 0 447 0;}
+@font-face
+	{font-family:"Menlo Regular";
+	panose-1:2 11 6 9 3 8 4 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-436198657 -771687941 33554472 0 479 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#345A8A;
+	mso-themecolor:accent1;
+	mso-themeshade:181;
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:13.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
+	font-size:26.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
+	font-size:26.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
+	font-size:26.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 4.0pt 0cm;
+	font-size:26.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-priority:11;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Subtitle Char";
+	mso-style-next:Normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	letter-spacing:.75pt;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-ascii-font-family:"Lucida Grande";
+	mso-hansi-font-family:"Lucida Grande";
+	mso-bidi-font-family:"Lucida Grande";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#345A8A;
+	mso-themecolor:accent1;
+	mso-themeshade:181;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Title;
+	mso-ansi-font-size:26.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-priority:11;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Subtitle;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	letter-spacing:.75pt;
+	font-style:italic;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:Calibri;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+p.Code, li.Code, div.Code
+	{mso-style-name:Code;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Code Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	background:#F2F2F2;
+	mso-background-themecolor:background1;
+	mso-background-themeshade:242;
+	border:none;
+	mso-border-alt:solid windowtext .5pt;
+	padding:0cm;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Menlo Regular";
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-no-proof:yes;}
+span.CodeChar
+	{mso-style-name:"Code Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Code;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Menlo Regular";
+	mso-ascii-font-family:"Menlo Regular";
+	mso-hansi-font-family:"Menlo Regular";
+	background:#F2F2F2;
+	mso-shading-themecolor:background1;
+	mso-shading-themeshade:242;
+	mso-no-proof:yes;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"\FF2D\FF33 \660E\671D";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;}
+@page WordSection1
+	{size:595.0pt 842.0pt;
+	margin:72.0pt 77.6pt 72.0pt 78.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:348720380;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-2065244716 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l1
+	{mso-list-id:1267081735;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1412361494 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:1624072438;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-312712390 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:59;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;}
+table.MsoTableLightListAccent5
+	{mso-style-name:"Light List - Accent 5";
+	mso-tstyle-rowband-size:1;
+	mso-tstyle-colband-size:1;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	border:solid #4BACC6 1.0pt;
+	mso-border-themecolor:accent5;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;}
+table.MsoTableLightListAccent5FirstRow
+	{mso-style-name:"Light List - Accent 5";
+	mso-table-condition:first-row;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-shading:#4BACC6;
+	mso-tstyle-shading-themecolor:accent5;
+	mso-para-margin-top:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-bottom:.0001pt;
+	line-height:normal;
+	color:white;
+	mso-themecolor:background1;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListAccent5LastRow
+	{mso-style-name:"Light List - Accent 5";
+	mso-table-condition:last-row;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-border-top:2.25pt double #4BACC6;
+	mso-tstyle-border-top-themecolor:accent5;
+	mso-tstyle-border-left:1.0pt solid #4BACC6;
+	mso-tstyle-border-left-themecolor:accent5;
+	mso-tstyle-border-bottom:1.0pt solid #4BACC6;
+	mso-tstyle-border-bottom-themecolor:accent5;
+	mso-tstyle-border-right:1.0pt solid #4BACC6;
+	mso-tstyle-border-right-themecolor:accent5;
+	mso-para-margin-top:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-bottom:.0001pt;
+	line-height:normal;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListAccent5FirstCol
+	{mso-style-name:"Light List - Accent 5";
+	mso-table-condition:first-column;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListAccent5LastCol
+	{mso-style-name:"Light List - Accent 5";
+	mso-table-condition:last-column;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListAccent5OddColumn
+	{mso-style-name:"Light List - Accent 5";
+	mso-table-condition:odd-column;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-border-top:1.0pt solid #4BACC6;
+	mso-tstyle-border-top-themecolor:accent5;
+	mso-tstyle-border-left:1.0pt solid #4BACC6;
+	mso-tstyle-border-left-themecolor:accent5;
+	mso-tstyle-border-bottom:1.0pt solid #4BACC6;
+	mso-tstyle-border-bottom-themecolor:accent5;
+	mso-tstyle-border-right:1.0pt solid #4BACC6;
+	mso-tstyle-border-right-themecolor:accent5;}
+table.MsoTableLightListAccent5OddRow
+	{mso-style-name:"Light List - Accent 5";
+	mso-table-condition:odd-row;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-border-top:1.0pt solid #4BACC6;
+	mso-tstyle-border-top-themecolor:accent5;
+	mso-tstyle-border-left:1.0pt solid #4BACC6;
+	mso-tstyle-border-left-themecolor:accent5;
+	mso-tstyle-border-bottom:1.0pt solid #4BACC6;
+	mso-tstyle-border-bottom-themecolor:accent5;
+	mso-tstyle-border-right:1.0pt solid #4BACC6;
+	mso-tstyle-border-right-themecolor:accent5;}
+table.MsoTableLightListAccent6
+	{mso-style-name:"Light List - Accent 6";
+	mso-tstyle-rowband-size:1;
+	mso-tstyle-colband-size:1;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	border:solid #F79646 1.0pt;
+	mso-border-themecolor:accent6;
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;}
+table.MsoTableLightListAccent6FirstRow
+	{mso-style-name:"Light List - Accent 6";
+	mso-table-condition:first-row;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-shading:#F79646;
+	mso-tstyle-shading-themecolor:accent6;
+	mso-para-margin-top:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-bottom:.0001pt;
+	line-height:normal;
+	color:white;
+	mso-themecolor:background1;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListAccent6LastRow
+	{mso-style-name:"Light List - Accent 6";
+	mso-table-condition:last-row;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-border-top:2.25pt double #F79646;
+	mso-tstyle-border-top-themecolor:accent6;
+	mso-tstyle-border-left:1.0pt solid #F79646;
+	mso-tstyle-border-left-themecolor:accent6;
+	mso-tstyle-border-bottom:1.0pt solid #F79646;
+	mso-tstyle-border-bottom-themecolor:accent6;
+	mso-tstyle-border-right:1.0pt solid #F79646;
+	mso-tstyle-border-right-themecolor:accent6;
+	mso-para-margin-top:0cm;
+	mso-para-margin-bottom:0cm;
+	mso-para-margin-bottom:.0001pt;
+	line-height:normal;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListAccent6FirstCol
+	{mso-style-name:"Light List - Accent 6";
+	mso-table-condition:first-column;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListAccent6LastCol
+	{mso-style-name:"Light List - Accent 6";
+	mso-table-condition:last-column;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-ansi-font-weight:bold;
+	mso-bidi-font-weight:bold;}
+table.MsoTableLightListAccent6OddColumn
+	{mso-style-name:"Light List - Accent 6";
+	mso-table-condition:odd-column;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-border-top:1.0pt solid #F79646;
+	mso-tstyle-border-top-themecolor:accent6;
+	mso-tstyle-border-left:1.0pt solid #F79646;
+	mso-tstyle-border-left-themecolor:accent6;
+	mso-tstyle-border-bottom:1.0pt solid #F79646;
+	mso-tstyle-border-bottom-themecolor:accent6;
+	mso-tstyle-border-right:1.0pt solid #F79646;
+	mso-tstyle-border-right-themecolor:accent6;}
+table.MsoTableLightListAccent6OddRow
+	{mso-style-name:"Light List - Accent 6";
+	mso-table-condition:odd-row;
+	mso-style-priority:61;
+	mso-style-unhide:no;
+	mso-tstyle-border-top:1.0pt solid #F79646;
+	mso-tstyle-border-top-themecolor:accent6;
+	mso-tstyle-border-left:1.0pt solid #F79646;
+	mso-tstyle-border-left-themecolor:accent6;
+	mso-tstyle-border-bottom:1.0pt solid #F79646;
+	mso-tstyle-border-bottom-themecolor:accent6;
+	mso-tstyle-border-right:1.0pt solid #F79646;
+	mso-tstyle-border-right-themecolor:accent6;}
+</style>
+<![endif]-->
+</head>
+
+<body bgcolor=white lang=EN-US link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=WordSection1>
+
+<div style='mso-element:para-border-div;border:none;border-bottom:solid #4F81BD 1.0pt;
+mso-border-bottom-themecolor:accent1;padding:0cm 0cm 4.0pt 0cm'>
+
+<p class=MsoTitle>Discovery data feed for <span class=SpellE>Eid</span> 2.0</p>
+
+</div>
+
+<p class=MsoSubtitle>Proposal for a generic discovery solution for <span
+class=SpellE>Eid</span> 2.0</p>
+
+<p class=MsoNormal>Stefan Santesson, 3xA Security AB<span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2011-09-10</p>
+
+<h1>Summary</h1>
+
+<p class=MsoNormal>E-<span class=SpellE>legitimationsnämnden</span> in Sweden
+are preparing for a new infrastructure for identification and electronic
+signatures (<span class=SpellE>Eid</span> 2.0). A test infrastructure is put
+into place (<span class=SpellE>Testbädden</span> <span class=SpellE>för</span> <span
+class=SpellE>Eid</span> 2.0) where participants can test implementations and
+contribute to technical specifications.</p>
+
+<p class=MsoNormal>One area that needs to be determined for <span class=SpellE>Eid</span>
+2.0 is the way to handle <span class=SpellE>IdP</span> discovery.</p>
+
+<p class=MsoNormal>This document outlines such proposal. The solution proposed
+in this document has been implemented and tested. Currently, this solution for <span
+class=SpellE>Idp</span> discovery is fully integrated in the test SP service
+located at <a href="https://eid2.3xasecurity.com">https://eid2.3xasecurity.com</a>.
+The proposed discovery data feed service is available at <a
+href="https://jsonpdisco.3xasecurity.com/">https://jsonpdisco.3xasecurity.com/</a>.</p>
+
+<h1>Background</h1>
+
+<h2>SAML discovery service</h2>
+
+<p class=MsoNormal>The use for a 3<sup>rd</sup> party discovery service
+according to the SAML discovery service protocol has its advantages and
+disadvantages. A great disadvantage is that the discovery service introduces
+one more web page (dialogue) that the user needs to visit on login and that
+this dialogue also may introduce a whole new look and feel than the service
+provider and the identity provider web pages.</p>
+
+<p class=MsoNormal>A great advantage is however that the discovery service is a
+common service with which the user may get/set a cookie to remember the choice
+of Identity provider across multiple services. That is, when a user selects an
+identity provider for login to one service, this choice can be stored in a
+cookie and become the preferred choice also when the same user wants to login
+to another service using the same common discovery service.</p>
+
+<p class=MsoNormal><span style="mso-spacerun:yes">&nbsp;</span>The advantages
+and disadvantages with a local integration of <span class=SpellE>IdP</span>
+discovery at the local Service Provider is opposite. The advantage is that it
+provides the user with a homogeneous user experience as the <span class=SpellE>IdP</span>
+selection process can be integrated in the SP web service. The disadvantage is
+that this choice is hard to store with the user in a way that can help the user
+make the same <span class=SpellE>IdP</span> choice at another SP with a local
+discovery implementation.</p>
+
+<h2>Local discovery feed at the SP</h2>
+
+<p class=MsoNormal>Service provider applications used to integrate SAML
+authentication with an SP service, such as the Shibboleth SP application,
+provides a local discovery data feed that can be accessed from a login page
+using Ajax requests. The provided data in the feed is extracted from a local
+cache of the federation metadata. In the Shibboleth case, this discovery data
+is provided as JSON data that can be imported and used in a browser web page using
+a simple JavaScript.</p>
+
+<p class=MsoNormal>Following the user’s selection of <span class=SpellE>IdP</span>
+based on the available choices of Identity provider services, the user’s web
+browser can remember the choice of <span class=SpellE>IdP</span> across
+multiple sessions by setting a cookie. The problem here, as noted above, is
+that this cookie by default is not useful when the user visits a service in
+another domain.</p>
+
+<h2>Common discovery feed.</h2>
+
+<p class=MsoNormal>One way to overcome the limitation of a local SP based discovery
+service that allows a user to remember the choice of Identity provider across
+multiple services, is to use a common discovery feed, which is provided as a
+common service to support all SP services in the federation. This will allow
+the user to set a cookie with the common discovery service and thus remember
+the choice of <span class=SpellE>IdP</span> across all SP services. However, in
+order to accomplish this, the solution must be designed to overcome some
+challenges, in particular the “same origin policy” enforced by common browsers.</p>
+
+<h2>The same origin policy</h2>
+
+<p class=MsoNormal>It is common to import data to a web page using Ajax
+(Asynchronous Java and XML), which in the case of discovery feeds, often is
+obtained in JSON format (instead of XML). However, browsers impose the “same origin
+policy” on Ajax requests for data. That is, the source of Ajax data must origin
+from the same domain (and use the same protocol) as the web page requesting the
+data. To request Ajax data from a service located in domain that is different
+from the domain of the SP providing the login web page, violates the same
+origin policy and is prevented. This effectively prevents any use of Ajax
+requests for discovery data in JSON form from a shared discovery service.</p>
+
+<h2>Solving the same origin policy problem with JSONP</h2>
+
+<p class=MsoNormal>One common way to circumvent this limitation is to use JSONP
+(Padded JSON). JSONP takes advantages of the fact that the same domain policy
+only applies to requests for data, but does not apply to import of <span
+class=SpellE>JavaScripts</span> from sources in other domains. JASONP therefore
+solves this problem by packaging data inside a JavaScript.</p>
+
+<p class=MsoNormal>While this may sound complicated, it is made very easy in
+practice through common libraries such as the <span class=SpellE>jquery</span>
+JavaScript library, which provides easy implementation of JSONP based data
+retrieval from sources outside of the web page document domain.</p>
+
+<h2>JSONP format</h2>
+
+<p class=MsoNormal>It is very easy to convert JSON data to JSONP. For example,
+if the JSON data is:</p>
+
+<p class=MsoNormal><span style='font-size:11.0pt;font-family:"Courier New"'>{“<span
+class=GramE>name</span>”: “Carl”}<o:p></o:p></span></p>
+
+<p class=MsoNormal>The JSONP version of this data is:</p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE><span style='font-size:
+11.0pt;font-family:"Courier New"'>callbackFunctionName</span></span></span><span
+style='font-size:11.0pt;font-family:"Courier New"'> ({“name”: “Carl”})<o:p></o:p></span></p>
+
+<p class=MsoNormal>The name of the callback function “<span class=SpellE>callBackFunctionName</span>”
+can be arbitrarily chosen but must be unique within a session to enable the
+JavaScript to identify what data that is associated with each request.</p>
+
+<p class=MsoNormal>Making a request for JSONP data is very easy in practice when
+using <span class=SpellE>jquery</span>, since <span class=SpellE>jquery</span>
+generates a random callback function name for every data request.</p>
+
+<p class=MsoNormal>A typical <span class=SpellE>jquery</span> AJAX request for JSON
+data may look like:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'>$.getJSON(‘urlToDataSource', function(json) {</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>//Code to handle the json data</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'>});</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The $<span class=GramE>.<span class=SpellE>gtetJSON</span></span>
+function normally gets the requested data using AJAX. However, by adding a
+“callback=?” query parameter to the URL, <span class=SpellE>jquery</span>
+alters the request from AJAX to an Http GET of a JavaScript that holds JSONP
+padded data. <span class=SpellE>Jquery</span> generates a random callback name
+(replacing the “?”) and then uses this callback function to retrieve the data.
+All that needs to be done to alter the <span class=SpellE>jquery</span>
+JavaScript above to obtain the same JSON data through a JSONP request, is the
+following:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'>$.getJSON(‘urlToDataSource?callback=?',
+function(json) {</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>//Code to handle the json data</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'>});</p>
+
+</div>
+
+<p class=MsoNormal>The exact same JSON data is obtained in both examples. The
+only difference is that we are no longer restricted by the same origin policy
+with regards to the location of the data source when using JSONP.</p>
+
+<p class=MsoNormal>The server side implementation is almost as simple. The only
+thing the server side must do does in addition to a normal Ajax response of
+JSON data, is to read the callback function name from the URL query string in
+the Http GET request and wrap the JSON data behind that callback name, enclosed
+in parenthesis (as illustrated above).</p>
+
+<p class=MsoNormal>An example of such server side logic implemented inside an <span
+class=SpellE>HttpServlet</span> is:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'>protected void processRequest(HttpServletRequest
+request,</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>HttpServletResponse
+response)</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>throws ServletException,
+IOException {</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><o:p>&nbsp;</o:p></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>String callback = request.getParameter(&quot;callback&quot;);</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>if (callback != null) {</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>String jsonp =
+callback + &quot;(&quot; + getJSONData() + &quot;)&quot;;</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>response.getWriter().write(jsonp);</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>}</p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'>}<span style="mso-spacerun:yes">&nbsp; </span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Where the <span class=SpellE>getJSONData</span><span
+class=GramE>( )</span> function obtains the actual JSON content.</p>
+
+<span style='font-size:12.0pt;font-family:Cambria;mso-ascii-theme-font:minor-latin;
+mso-fareast-font-family:"\FF2D\FF33 \660E\671D";mso-fareast-theme-font:minor-fareast;
+mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA'><br clear=all style='mso-special-character:line-break;
+page-break-before:always'>
+</span>
+
+<p class=MsoNormal><b><span style='font-size:16.0pt;font-family:Calibri;
+mso-ascii-theme-font:major-latin;mso-fareast-font-family:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:major-latin;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:major-bidi;
+color:#345A8A;mso-themecolor:accent1;mso-themeshade:181'><o:p>&nbsp;</o:p></span></b></p>
+
+<h1>Proposed solution for <span class=SpellE>Eid</span> 2.0</h1>
+
+<p class=MsoNormal>A solution is proposed for <span class=SpellE>Eid</span> 2.0
+where service providers obtains discovery data from a common JSONP discovery
+data feed:</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_2" o:spid="_x0000_i1025" type="#_x0000_t75"
+ style='width:776pt;height:567pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Common_discovery_datafeed_files/image001.emz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=778 height=569
+src="Common_discovery_datafeed_files/image002.png" v:shapes="Picture_x0020_2"><![endif]></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2>Requests</h2>
+
+<p class=MsoNormal>The proposed JSONP discovery data feed offers two request
+functions:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-fareast-font-family:Cambria;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Cambria;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Request for discovery data</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-fareast-font-family:Cambria;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Cambria;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Request for discovery cookie</p>
+
+<h2>Session flow</h2>
+
+<p class=MsoNormal>A typical session flow involves the following steps:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Cambria;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Cambria;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'>Get login
+page:</b> The user loads a login web page from the service provider. This web
+page contains java script that implements the following steps.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Cambria;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Cambria;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'>Request
+discovery data:</b> A request for discovery data is sent to the common JSONP
+discovery data feed by a JavaScript in the login page. The users cookie
+information about previous <span class=SpellE>IdP</span> choices is sent with
+the request. The response holds JSONP formatted data with two main components:</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Cambria;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Cambria;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Information about the users’ previous choice of
+Identity provider based on the cookie sent in the request.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-indent:-18.0pt;mso-list:l0 level2 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Cambria;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Cambria;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Information about all available Identity
+providers.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Cambria;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Cambria;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'>Update
+the <span class=SpellE>IdP</span> selection dialogue:</b> The <span
+class=SpellE>IdP</span> selection dialogue is updated with the available <span
+class=SpellE>IdPs</span> listed in the discovery data where the user’s previous
+choice of <span class=SpellE>IdP</span> is presented as the default choice.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Cambria;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Cambria;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'>User
+requests login:</b> The user requests login with the selected <span
+class=SpellE>Idp</span>.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Cambria;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Cambria;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'>Set <span
+class=SpellE>IdP</span> selection cookie:</b> Before sending the user to the
+selected Identity provider, <span class=GramE>The</span> sends a new JSONP
+request to the discovery feed with information about the selected <span
+class=SpellE>IdP</span>. The server returns a cookie with information about the
+<span class=SpellE>IdP</span> selection.</p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Cambria;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Cambria;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b style='mso-bidi-font-weight:normal'>User
+authentication:</b> The user is transferred to the selected <span class=SpellE>IdP</span>
+for authentication. </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2>Request format</h2>
+
+<p class=MsoNormal>Requests are sent to the JSONP discovery feed using Http Get
+and parameters of the request are sent as an URL encoded query string using the
+following fields and values:</p>
+
+<table class=MsoTableLightListAccent6 border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid #F79646 1.0pt;
+ mso-border-themecolor:accent6;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes'>
+  <td width=62 valign=top style='width:62.1pt;border-top:solid #F79646 1.0pt;
+  mso-border-top-themecolor:accent6;border-left:solid #F79646 1.0pt;mso-border-left-themecolor:
+  accent6;border-bottom:none;border-right:none;background:#F79646;mso-background-themecolor:
+  accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  5'><b><span style='color:white;mso-themecolor:background1'>Field<o:p></o:p></span></b></p>
+  </td>
+  <td width=142 valign=top style='width:5.0cm;border:none;border-top:solid #F79646 1.0pt;
+  mso-border-top-themecolor:accent6;background:#F79646;mso-background-themecolor:
+  accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  1'><b><span style='color:white;mso-themecolor:background1'>Values<o:p></o:p></span></b></p>
+  </td>
+  <td width=222 valign=top style='width:221.95pt;border-top:solid #F79646 1.0pt;
+  mso-border-top-themecolor:accent6;border-left:none;border-bottom:none;
+  border-right:solid #F79646 1.0pt;mso-border-right-themecolor:accent6;
+  background:#F79646;mso-background-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  1'><b><span style='color:white;mso-themecolor:background1'>Description<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width=62 rowspan=2 valign=top style='width:62.1pt;border-top:solid #F79646 1.0pt;
+  mso-border-top-themecolor:accent6;border-left:solid #F79646 1.0pt;mso-border-left-themecolor:
+  accent6;border-bottom:none;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  68'><span class=GramE><b>action</b></span><b><o:p></o:p></b></p>
+  </td>
+  <td width=142 valign=top style='width:5.0cm;border-top:solid #F79646 1.0pt;
+  mso-border-top-themecolor:accent6;border-left:none;border-bottom:solid #F79646 1.0pt;
+  mso-border-bottom-themecolor:accent6;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  64'>“<span class=SpellE><span class=GramE>discoFeed</span></span>”</p>
+  </td>
+  <td width=222 valign=top style='width:221.95pt;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  64'>Specifies a request for discovery data</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=142 valign=top style='width:5.0cm;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt'>“<span
+  class=SpellE><span class=GramE>setCookie</span></span>”</p>
+  </td>
+  <td width=222 valign=top style='width:221.95pt;border:none;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt'>Specifies
+  a request for a cookie holding the <span class=SpellE>entityID</span> of the
+  selected <span class=SpellE>IdP</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=62 valign=top style='width:62.1pt;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  68'><span class=GramE><b>source</b></span><b><o:p></o:p></b></p>
+  </td>
+  <td width=142 valign=top style='width:5.0cm;border-top:solid #F79646 1.0pt;
+  mso-border-top-themecolor:accent6;border-left:none;border-bottom:solid #F79646 1.0pt;
+  mso-border-bottom-themecolor:accent6;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  64'>URL to external source of JSON discovery data</p>
+  </td>
+  <td width=222 valign=top style='width:221.95pt;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  64'>This is an optional field that only is relevant in a request for
+  discovery data. Absent this field the JSONP server will construct the
+  discovery data from the federation Metadata. If this field is present the
+  specified URL are used to request JSON discovery data from the specified
+  source.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=62 valign=top style='width:62.1pt;border:none;border-left:solid #F79646 1.0pt;
+  mso-border-left-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  4'><span class=SpellE><span class=GramE><b>maxAge</b></span></span><b><o:p></o:p></b></p>
+  </td>
+  <td width=142 valign=top style='width:5.0cm;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt'>Number of
+  days until the requested cookie expires</p>
+  </td>
+  <td width=222 valign=top style='width:221.95pt;border:none;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt'>If this
+  field is absent the cookie will be sent as a session cookie that will expire
+  at the end of the session. This field is only relevant in requests for a
+  cookie.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td width=62 valign=top style='width:62.1pt;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  68'><span class=GramE><b>callback</b></span><b><o:p></o:p></b></p>
+  </td>
+  <td width=142 valign=top style='width:5.0cm;border-top:solid #F79646 1.0pt;
+  mso-border-top-themecolor:accent6;border-left:none;border-bottom:solid #F79646 1.0pt;
+  mso-border-bottom-themecolor:accent6;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  64'>“?”</p>
+  </td>
+  <td width=222 valign=top style='width:221.95pt;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  64'>This field specifies the name <span class=SpellE>fo</span> the callback
+  function in the response JavaScript and is required in all requests. The
+  value must be unique for every data request. When this field is specified in
+  a <span class=SpellE>jquery</span> $<span class=GramE>.<span class=SpellE>getJSON</span></span>
+  function, the value is set to “?” in order to auto-generate a random value.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style="mso-spacerun:yes">&nbsp;</span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Example:<o:p></o:p></b></p>
+
+<p class=MsoNormal>The following is examples of typical requests to a JSONP
+discovery feed located at “https://jsonpdisco.3xasecurity.com/feed”.</p>
+
+<p class=MsoNormal>A standard request for discovery data (generated by <span
+class=SpellE>jQuery</span>):</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'>https://jsonpdisco.3xasecurity.com/feed?action=discoFeed&amp;callback=
+?</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>A request for discovery data where the &lt;<span
+class=SpellE>DiscoFeed_JSON</span>&gt; part of the discovery data is obtained
+from an external source, in this case from “https://eid2.3xasecurity.com/<span
+class=SpellE>Shibboleth.sso</span>/<span class=SpellE>DiscoFeed</span>”:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'>https://jsonpdisco.3xasecurity.com/feed?action=discoFeed&amp;source=https://eid2.3xasecurity.com/Shibboleth.sso/DiscoFeed&amp;callback=?</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>A standard request for a cookie, specifying that the <span
+class=SpellE>slected</span> <span class=SpellE>IdP</span> <span class=GramE>has</span>
+the <span class=SpellE>entityID</span> “https://idp.test.eid2.se/<span
+class=SpellE>idp</span>/shibboleth”:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'>https://jsonpdisco.3xasecurity.com/feed?action=setCookie&amp;entityID=https://idp.test.eid2.se/idp/shibboleth&amp;maxAge=100&amp;callback=?</p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Note:</b> In all
+these examples the name of the callback function is set to “?”, which is the
+standard value in a <span class=SpellE>jquery</span> $<span class=GramE>.<span
+class=SpellE>getJSON</span></span> request that will cause <span class=SpellE>jquery</span>
+to replace “?” with a unique value. The actual URL query string value sent to
+the server may look like this:<span style="mso-spacerun:yes">&nbsp;
+</span>“callback=jQuery16204822596514131874_1315799464617”. This value must be
+unique for each request.</p>
+
+<h2>Response format</h2>
+
+<p class=MsoNormal style='page-break-after:avoid'>The discovery data response
+format uses the following main objects:</p>
+
+<table class=MsoTableLightListAccent6 border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;mso-table-layout-alt:fixed;border:none;
+ mso-border-alt:solid #F79646 1.0pt;mso-border-themecolor:accent6;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes'>
+  <td width=112 valign=top style='width:111.75pt;border-top:solid #F79646 1.0pt;
+  mso-border-top-themecolor:accent6;border-left:solid #F79646 1.0pt;mso-border-left-themecolor:
+  accent6;border-bottom:none;border-right:none;background:#F79646;mso-background-themecolor:
+  accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;page-break-after:
+  avoid;mso-yfti-cnfc:5'><b><span lang=TA style='color:white;mso-themecolor:
+  background1;mso-ansi-language:TA;mso-no-proof:yes'>Object<o:p></o:p></span></b></p>
+  </td>
+  <td width=312 valign=top style='width:11.0cm;border-top:solid #F79646 1.0pt;
+  mso-border-top-themecolor:accent6;border-left:none;border-bottom:none;
+  border-right:solid #F79646 1.0pt;mso-border-right-themecolor:accent6;
+  background:#F79646;mso-background-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;page-break-after:
+  avoid;mso-yfti-cnfc:1'><b><span lang=TA style='color:white;mso-themecolor:
+  background1;mso-ansi-language:TA;mso-no-proof:yes'>Content<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:0'>
+  <td width=112 valign=top style='width:111.75pt;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;page-break-after:
+  avoid;mso-yfti-cnfc:68'><b><span lang=TA style='mso-ansi-language:TA;
+  mso-no-proof:yes'>JSONP data<o:p></o:p></span></b></p>
+  </td>
+  <td width=312 valign=top style='width:11.0cm;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;page-break-after:
+  avoid;mso-yfti-cnfc:64'><span lang=TA style='font-size:10.0pt;font-family:
+  "Menlo Regular";mso-ansi-language:TA;mso-no-proof:yes'>Callback_name(&lt;Extended_JSON&gt;)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=112 valign=top style='width:111.75pt;border:none;border-left:solid #F79646 1.0pt;
+  mso-border-left-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;page-break-after:
+  avoid;mso-yfti-cnfc:4'><b><span lang=TA style='mso-ansi-language:TA;
+  mso-no-proof:yes'>Extended_JSON<o:p></o:p></span></b></p>
+  </td>
+  <td width=312 valign=top style='width:11.0cm;border:none;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;page-break-after:
+  avoid'><span lang=TA style='font-size:10.0pt;font-family:"Menlo Regular";
+  mso-ansi-language:TA;mso-no-proof:yes'>{“last”: [“entityID” : &lt;entityID
+  value&gt;],<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;page-break-after:
+  avoid'><span lang=TA style='font-size:10.0pt;font-family:"Menlo Regular";
+  mso-ansi-language:TA;mso-no-proof:yes'><span style="mso-spacerun:yes">&nbsp;
+  </span>“discoFeed” : &lt;DiscoFeed_JSON&gt;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=112 valign=top style='width:111.75pt;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  68'><b><span lang=TA style='mso-ansi-language:TA;mso-no-proof:yes'>DiscoFeed_JSON<o:p></o:p></span></b></p>
+  </td>
+  <td width=312 valign=top style='width:11.0cm;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  64'><span lang=TA style='font-size:10.0pt;font-family:"Menlo Regular";
+  mso-ansi-language:TA;mso-no-proof:yes'>[&lt;Array of IdP_data_object&gt;]<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=112 valign=top style='width:111.75pt;border:none;border-left:solid #F79646 1.0pt;
+  mso-border-left-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  4'><b><span lang=TA style='mso-ansi-language:TA;mso-no-proof:yes'>IdP_data_object<o:p></o:p></span></b></p>
+  </td>
+  <td width=312 valign=top style='width:11.0cm;border:none;border-right:solid #F79646 1.0pt;
+  mso-border-right-themecolor:accent6;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt'><span
+  lang=TA style='font-size:10.0pt;font-family:"Menlo Regular";mso-ansi-language:
+  TA;mso-no-proof:yes'>{“entityID”: &lt;entityID&gt;,<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt'><span
+  lang=TA style='font-size:10.0pt;font-family:"Menlo Regular";mso-ansi-language:
+  TA;mso-no-proof:yes'><span style="mso-spacerun:yes">&nbsp;
+  </span>“DisplayName”: [&lt;Array of DisplayName&gt;]}<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td width=112 valign=top style='width:111.75pt;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  68'><b><span lang=TA style='mso-ansi-language:TA;mso-no-proof:yes'>DisplayName<o:p></o:p></span></b></p>
+  </td>
+  <td width=312 valign=top style='width:11.0cm;border:solid #F79646 1.0pt;
+  mso-border-themecolor:accent6;border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  64'><span lang=TA style='font-size:10.0pt;font-family:"Menlo Regular";
+  mso-ansi-language:TA;mso-no-proof:yes'>{“value”: &lt;display name&gt;,<o:p></o:p></span></p>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;mso-yfti-cnfc:
+  64'><span lang=TA style='font-size:10.0pt;font-family:"Menlo Regular";
+  mso-ansi-language:TA;mso-no-proof:yes'><span style="mso-spacerun:yes">&nbsp;
+  </span>“lang”: &lt;ISO 639-1 language code&gt;<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Note: </b>If no
+information about the user’s previous choice of <span class=SpellE>IdP</span>
+is know (no cookie is provided in the request), the <span class=SpellE>entityID</span>
+value of “last” is set to an empty string.</p>
+
+<p class=MsoNormal>The JSON structure for <span class=SpellE>DiscoFeed_JSON</span>
+is compatible with the JSON format for the <span class=SpellE>DiscoFeed</span>
+provided by a Shibboleth SP.</p>
+
+<p class=MsoNormal>The format outlined above is the format used for standard
+responses, i.e. where the “source” <span class=SpellE><span class=GramE>url</span></span>
+query string field is absent. If the “source” field is present, the data
+obtained by dereferencing the “source” URL is injected as the <span
+class=SpellE>DiscoFeed_JSON</span> data regardless of its format. This allows
+an SP to provide <span class=SpellE>IdP</span> data in any customized data
+format to the login pages obtained from the service, but to channel the data
+through the common JSONP discovery feed in order to allow use of the common
+cookie to determine the user’s last <span class=SpellE>IdP</span> selection in
+any of the present services.</p>
+
+<p class=MsoNormal style='page-break-after:avoid'><b style='mso-bidi-font-weight:
+normal'>Example:<o:p></o:p></b></p>
+
+<p class=MsoNormal style='page-break-after:avoid'>The following is an example
+of JSONP data according to the default format:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>jQuery16204822596514131874_1315799464617(<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>{&quot;last&quot;:
+[{&quot;entityID&quot;: &quot;https://idp.test.eid2.se/idp/shibboleth&quot;}],<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;</span>&quot;discoFeed&quot;: <o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>[<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>{&quot;entityID&quot;:
+&quot;https://idp-test.nordu.net/idp/shibboleth&quot;,<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;</span>&quot;DisplayNames&quot;: [<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp; </span>{&quot;value&quot;: &quot;NORDUnet (Test
+IdP)&quot;,<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>&quot;lang&quot;: &quot;en&quot;}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;</span>]},<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>{&quot;entityID&quot;:
+&quot;https://idp.test.eid2.se/idp/shibboleth&quot;,<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;</span>&quot;DisplayNames&quot;: [<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp; </span>{&quot;value&quot;: &quot;EID Testbädd
+Referens-IDP&quot;,<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>&quot;lang&quot;: &quot;en&quot;}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;</span>]},<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>{&quot;entityID&quot;:
+&quot;https://idp.kirei.se/saml2/idp/metadata.php&quot;,<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;</span>&quot;DisplayNames&quot;: [<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp; </span>{&quot;value&quot;: &quot;Kirei
+IDP&quot;,<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>&quot;lang&quot;: &quot;en&quot;},<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp; </span>{&quot;value&quot;: &quot;Kirei
+IDP&quot;,<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp; </span>&quot;lang&quot;: &quot;sv&quot;}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;</span>]}]}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>)<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'>Cookie response data format<o:p></o:p></b></p>
+
+<p class=MsoNormal>The important information in the response to a cookie
+request is the cookie itself, provided in the Http headers. Any data in the
+response can safely be ignored.</p>
+
+<p class=MsoNormal>However, for convenience, the current implementation of this
+proposal just returns the <span class=SpellE>entityID</span> of the selected <span
+class=SpellE>IdP</span> in the response data, sent in JSONP form as illustrated
+by the following example:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>jQuery16204822596514131874_1315799464617(<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp; </span>{&quot;entityID&quot;:
+&quot;https://idp.test.eid2.se/idp/shibboleth&quot;}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>)<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2>Cookie</h2>
+
+<p class=MsoNormal>The name of the http cookie set by the server the present
+implementation example is “<span class=SpellE>lastIdp</span>”. The name can
+however be arbitrarily set by the server to any suitable name.</p>
+
+<p class=MsoNormal>The cookie returned by the server has its value set to the to
+the value of the “<span class=SpellE>entityID</span>” filed in the request for
+a cookie and its <span class=SpellE>maxAge</span> set to the number of days
+specified by the <span class=SpellE>maxAge</span> field in the request.<br
+clear=all style='mso-special-character:line-break;page-break-before:always'>
+</p>
+
+<h1>Implementation</h1>
+
+<p class=MsoNormal>The current proposal has been implemented in a Service
+Provider within the test identity federation for “<span class=SpellE>Testbädden</span>
+<span class=SpellE>för</span> <span class=SpellE>Eid</span> 2.0”.</p>
+
+<p class=MsoNormal>The SP is located at: <a
+href="https://eid2.3xasecurity.com/login/">https://eid2.3xasecurity.com/login/</a></p>
+
+<p class=MsoNormal>The JSONP discovery feed used in this implementation is
+located at: <a href="https://jsonpdisco.3xasecurity.com/">https://jsonpdisco.3xasecurity.com/</a></p>
+
+<h2>Client implementation</h2>
+
+<p class=MsoNormal>The <span class=SpellE>IdP</span> discovery data and the
+information about previous <span class=SpellE>IdP</span> selection <span
+class=GramE>is</span> used to populate and preselect a value in a select box
+for <span class=SpellE>IdP</span> selection in the login page.</p>
+
+<p class=MsoNormal>The JavaScript used to request and parse discovery data is:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>function
+getDiscoFeed(){<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>var previous;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>var prevIdx =-1;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>$.getJSON('https://jsonpdisco.3xasecurity.com/feed’<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>+’?action=discoFeed&amp;callback=?', function(data) {<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>previous = data.last[0].entityID;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>$.each(data.discoFeed, function(i,idp){<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>entityID[i]=idp.entityID;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>if (entityID[i]==previous){<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>prevIdx=i;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>displayName[i]=idp.DisplayNames[0].value;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>// prefer names in Swedish <o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>$.each(idp.DisplayNames, function(j,idpName){<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if (idpName.lang == &quot;sv&quot;){<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>displayName[i]=idpName.value;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>});<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>$(&quot;&lt;option&gt;&lt;/option&gt;&quot;)<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>.html(displayName[i]).appendTo(&quot;#idpSelect&quot;);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>});<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//
+Set last selected IdP as preselected value<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(prevIdx&gt;-1){<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>$('#idpSelect option')[prevIdx].selected = true;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>});<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The java script used to set a cookie and request user login
+at the selected <span class=SpellE>IdP</span> is:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>function
+idpLogin(){<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>var i =
+document.getElementById('idpSelect').selectedIndex;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>$.getJSON('https://jsonpdisco.3xasecurity.com/feed’<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>+’?action=setCookie&amp;entityID='<o:p></o:p></span></p>
+
+<p class=Code><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>+entityID[i]+'&amp;maxAge=120&amp;callback=?', function(data) {<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//
+Login<o:p></o:p></span></p>
+
+<p class=Code><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>window.location
+= ‘Shibboleth.sso/Login’ + ’?entityID=’<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>+ entityID[i] + ‘&amp;target=https://eid2.3xasecurity.com/sig/’;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>});<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2>Server implementation</h2>
+
+<p class=MsoNormal>The logic to parse requests in the HTTP servlet is provided
+by the following code:</p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#F2F2F2;mso-background-themecolor:background1;mso-background-themeshade:
+242'>
+
+<p class=Code><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>protected void
+processRequest(HttpServletRequest request,<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>HttpServletResponse
+response)<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>throws ServletException, IOException {<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>String action = request.getParameter(&quot;action&quot;);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(action == null) {<span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>return;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(action.equals(&quot;discoFeed&quot;)) {<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>response.setContentType(&quot;text/javascript&quot;);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>String json = getMetadataJson();<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>String sourceUrl = request.getParameter(&quot;source&quot;);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>if (sourceUrl != null) {<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>json = getDiscoFeed(sourceUrl);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>String callback = request.getParameter(&quot;callback&quot;);<o:p></o:p></span></p>
+
+<p class=Code><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>String jsonp = callback + &quot;(&quot; <o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>+ getExtendedFeed(json,
+request) + &quot;)&quot;;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>response.getWriter().write(jsonp);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if
+(action.equals(&quot;setCookie&quot;)) {<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>response.setContentType(&quot;text/javascript&quot;);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>String value = request.getParameter(&quot;entityID&quot;);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>String callback = request.getParameter(&quot;callback&quot;);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>String maxAgeStr = request.getParameter(&quot;maxAge&quot;);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>int maxAge;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>try {<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>maxAge = Integer.decode(maxAgeStr) * (60 * 60 * 24);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>} catch (Exception ex) {<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>maxAge = -1;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp; </span><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Cookie
+cookie = new Cookie(&quot;lastIdp&quot;, value);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>cookie.setMaxAge(maxAge);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>response.addCookie(cookie);<o:p></o:p></span></p>
+
+<p class=Code><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>String jsonp = callback + &quot;({\&quot;entityID\&quot;: \&quot;&quot;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-spacerun:yes">&nbsp;</span>+ value +
+&quot;\&quot;})&quot;;<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>response.getWriter().write(jsonp);<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+<p class=Code style='background:#F2F2F2;mso-background-themecolor:background1;
+mso-background-themeshade:242'><span style='mso-bidi-font-size:12.0pt'><span
+style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The external methods called in this code are:</p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;mso-list:l1 level1 lfo3'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span class=GramE><b
+style='mso-bidi-font-weight:normal'>getMetadataJson</b></span></span><b
+style='mso-bidi-font-weight:normal'>( )</b> returns <span class=SpellE>IdP</span>
+discovery data in JSON form, extracted from the federation Metadata.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;mso-list:l1 level1 lfo3'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span class=GramE><b
+style='mso-bidi-font-weight:normal'>getDiscoFeed</b></span></span><b
+style='mso-bidi-font-weight:normal'>(<span class=SpellE>sourceUrl</span>) </b>returns
+<span class=SpellE>IdP</span> discovery data in JSON form from the external
+source specified by the URL query field “source”.<b style='mso-bidi-font-weight:
+normal'><o:p></o:p></b></p>
+
+<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;mso-list:l1 level1 lfo3'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span class=SpellE><span class=GramE><b
+style='mso-bidi-font-weight:normal'>getExtendedFeed</b></span></span><b
+style='mso-bidi-font-weight:normal'>(<span class=SpellE>json</span>, request)</b>
+returns the complete JSON data for this feed, including both information about
+last selected <span class=SpellE>IdP</span> (extracted from the cookie in the
+request) and the <span class=SpellE>IdP</span> discovery JSON data.</p>
+
+</div>
+
+</body>
+
+</html>
