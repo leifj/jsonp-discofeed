@@ -33,6 +33,10 @@ public final class MetaData {
     private String discoJson;
     private static final String LF = System.getProperty("line.separator");
 
+    /**
+     * The MetaData class parses and extracts discovery data from a metadata file 
+     * @param xmlFile The Metadata file to parse.
+     */
     public MetaData(File xmlFile) {
         byte[] xmlData = Utils.readBinaryFile(xmlFile);
         start(xmlData);
@@ -166,18 +170,36 @@ public final class MetaData {
 
     }
 
+    /**
+     * Discovery data information
+     * @return A list of IdP Entity IDs extracted from the Metadata file
+     */
     public List<String> getEntityIds() {
         return entityIds;
     }
 
+    /**
+     * Discovery data information
+     * @return A hash map using EntityID as key to obtain a hash map over display names.
+     * The hash map over display names use the language code as key to obtain the 
+     * display name provided for that language.
+     */
     public Map<String, Map> getIdpMap() {
         return idpMap;
     }
 
+    /**
+     * Information whether discovery data was successfully extracted from the provided xml file
+     * @return true if discovery data was successfully extracted.
+     */
     public boolean isInitialized() {
         return initialized;
     }
 
+    /**
+     * Provides discovery data output.
+     * @return The discovery data in json format
+     */
     public String getDiscoJson() {
         return discoJson;
     }
